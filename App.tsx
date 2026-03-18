@@ -6,7 +6,7 @@ const REGISTRATION_LINK = "https://www.garotafit.com.br/new_account/wholesale/?s
 // Comentário: Substitua o link acima pelo link oficial caso mude.
 
 const FAQ_DATA = [
-  { q: "Qual o valor mínimo para fazer um pedido?", a: "O pedido mínimo é de R$1.000,00. Perfeito para você que quer começar a revender sem precisar de um grande investimento inicial." },
+  { q: "Qual o valor mínimo para fazer um pedido?", a: "O pedido mínimo é de R$1.000,00. Esse valor permite montar um mix estratégico com peças de alto giro, ideal para já sair vendendo e ter retorno rápido." },
   { q: "Quanto posso ter de retorno?", a: "O retorno sugerido é de até 100% sobre o investimento. Isso varia conforme o seu mix de produtos e a estratégia de venda aplicada na sua região." },
   { q: "Quais as formas de pagamento disponíveis?", a: "Oferecemos diversas opções, incluindo parcelamento em até 6x sem juros no cartão de crédito, PIX e Boleto Bancário." },
   { q: "Posso parcelar os pedidos para revenda?", a: "Sim, ofertamos parcelamento em até 6 parcelas sem juros no cartão de crédito." },
@@ -120,9 +120,9 @@ export default function App() {
           <a
             href={REGISTRATION_LINK}
             className="btn-primary text-[12px] md:text-xs py-0 px-4 md:px-8 h-full flex items-center justify-center rounded-none min-w-[120px] md:min-w-[200px] leading-tight text-center min-h-[44px]"
-            aria-label="Fazer cadastro para revenda Garotafit"
+            aria-label="Liberar catálogo e preços de atacado Garotafit"
           >
-            Fazer meu cadastro
+            Liberar catálogo &rarr;
           </a>
         </div>
       </header>
@@ -131,34 +131,43 @@ export default function App() {
         {/* Section 1: Hero */}
         <section className="bg-white px-6 lg:px-20 py-16 lg:py-28 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
           <div className="w-full lg:w-1/2 space-y-8">
-            <SectionSubtitle text="Revenda Garotafit" />
+            <span className="uppercase text-xs tracking-[0.2em] font-bold text-[#FFB02E]">
+              Para revendedoras que querem parar de competir por preço
+            </span>
             <h1 className="heading-hero text-black">
-              <span className="text-accent">Moda fitness</span> no atacado para revender com retorno de <span className="text-accent">até 100%</span>
+              Revenda <span className="text-accent">moda fitness premium</span> com mais segurança, suporte e giro — <span className="text-accent">sem medo</span> de ter um estoque parado
             </h1>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl">
-              Peças à pronta entrega com despacho em até 24h após confirmação do pagamento (envio de SP para todo Brasil).
+              Peças com qualidade garantida, pronta entrega e atendimento no WhatsApp para revendedoras que querem um fornecedor sério.
             </p>
-            <ul className="space-y-3 font-semibold text-sm lg:text-base">
-              <li className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#FFB02E] rounded-full" aria-hidden="true"></div>
-                Até 6x sem juros no cartão
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#FFB02E] rounded-full" aria-hidden="true"></div>
-                Catálogo e preços exclusivos liberados após cadastro
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 bg-[#FFB02E] rounded-full" aria-hidden="true"></div>
-                Suporte dedicado no WhatsApp
-              </li>
-            </ul>
+            <p className="font-bold text-sm lg:text-base text-black">
+              Pedido mínimo R$1.000 · até 6x sem juros · envio de SP para todo Brasil · Comece comprando com seu CPF
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Fazer cadastro para revenda Garotafit">Fazer meu cadastro</a>
-              <a href={REGISTRATION_LINK} className="btn-secondary" aria-label="Quero revender produtos Garotafit">Quero revender Garotafit</a>
+              <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado Garotafit">Liberar catálogo e preços de atacado &rarr;</a>
+              <a href={REGISTRATION_LINK} className="btn-secondary" aria-label="Solicitar aprovação como revendedora Garotafit">Solicitar aprovação como revendedora &rarr;</a>
             </div>
-            <p className="text-xs text-gray-500 italic max-w-md">
-              *Após o cadastro, você fala diretamente com nosso time no WhatsApp e libera seu acesso ao catálogo com preços exclusivos para atacado.
+            <p className="text-xs text-gray-400 text-center sm:text-left">
+              &#10003; Não precisa de CNPJ · Resposta em até 1 hora útil
             </p>
+
+            {/* Trust Bar */}
+            <div className="border-t border-gray-200 pt-6 mt-2">
+              <ul className="hidden lg:flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-gray-500">
+                <li>&#128274; CNPJ 36.277.854/0001-67</li>
+                <li>&#10003; Empresa desde 2011</li>
+                <li>&#10003; +2.000 revendedoras</li>
+                <li>&#10003; Sem CNPJ para comprar</li>
+                <li>&#10003; Despacho em até 24h</li>
+              </ul>
+              <ul className="lg:hidden flex flex-col gap-1.5 text-[12px] text-gray-500">
+                <li>&#128274; CNPJ 36.277.854/0001-67</li>
+                <li>&#10003; Empresa desde 2011</li>
+                <li>&#10003; +2.000 revendedoras ativas</li>
+                <li>&#10003; Sem CNPJ para comprar</li>
+                <li>&#10003; Despacho em até 24h</li>
+              </ul>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 relative group cursor-pointer">
             <div className="relative z-10 border-[15px] border-white shadow-2xl">
@@ -174,16 +183,65 @@ export default function App() {
           </div>
         </section>
 
-        {/* Section 2: Mini-bloco */}
-        <section className="bg-black text-white px-6 py-20 lg:py-32 text-center">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <h2 className="text-3xl lg:text-5xl">O setor que mais cresce no Brasil</h2>
-            <p className="text-lg lg:text-xl text-gray-400">
-              A moda fitness nunca esteve tão em alta e isso significa uma coisa: vendas constantes. E você pode ter um lucro de até 100% já na sua primeira venda.
-            </p>
-            <div className="pt-6">
-              <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Fazer cadastro para começar a revender">Fazer meu cadastro</a>
-            </div>
+        {/* Section 2: Por que revendedoras escolhem a Garotafit */}
+        <section className="bg-black text-white px-6 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-4">
+            <SectionSubtitle text="Diferenciais" />
+            <h2 className="text-3xl lg:text-5xl">Por que revendedoras escolhem a Garotafit</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: (
+                  <svg className="w-8 h-8 text-[#FFB02E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                ),
+                t: "Qualidade Premium \u00b7 Zero Transpar\u00eancia",
+                d: "Poliamida de alta gramatura. Suas clientes experimentam uma vez e voltam pedindo de novo."
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8 text-[#FFB02E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                ),
+                t: "Pronta Entrega e Despacho em 24h",
+                d: "Seu estoque chega r\u00e1pido. Voc\u00ea vende r\u00e1pido. Sem esperar semanas por pedido."
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8 text-[#FFB02E]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.03c0 2.123.554 4.197 1.604 6.04L0 24l6.117-1.605a11.782 11.782 0 005.925 1.597h.005c6.635 0 12.032-5.396 12.035-12.033a11.77 11.77 0 00-3.504-8.508z" />
+                  </svg>
+                ),
+                t: "Suporte no WhatsApp para Montar seu Pedido",
+                d: "Nossa equipe ajuda voc\u00ea a escolher as pe\u00e7as com maior hist\u00f3rico de giro para seu p\u00fablico."
+              },
+              {
+                icon: (
+                  <svg className="w-8 h-8 text-[#FFB02E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                ),
+                t: "Mix Selecionado pelo Giro Real",
+                d: "S\u00f3 entra no cat\u00e1logo quem vende. Cada pe\u00e7a foi validada por +2.000 revendedoras ativas."
+              }
+            ].map((item, i) => (
+              <div key={i} className="border border-white/10 p-8 group hover:border-[#FFB02E]/30 transition-colors">
+                <div className="mb-4 p-3 bg-white/5 w-fit group-hover:bg-[#FFB02E]/10 transition-colors">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg mb-3 leading-tight">{item.t}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{item.d}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
           </div>
         </section>
 
@@ -197,7 +255,7 @@ export default function App() {
               </h2>
             </div>
             <div className="text-lg text-gray-600">
-              Comece pequeno, venda rápido e cresça com suporte especializado. A Garotafit entrega moda fitness no atacado com condições exclusivas para sua revenda e atendimento especializado no WhatsApp para você vender com segurança.
+              Peças que giram rápido, suporte para montar seu mix e despacho em até 24h. A Garotafit entrega moda fitness premium no atacado com condições exclusivas e atendimento no WhatsApp para você vender com segurança — sem medo de comprar errado.
             </div>
           </div>
 
@@ -219,8 +277,8 @@ export default function App() {
           </div>
 
           <div className="mt-16 text-center space-y-6">
-            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Quero me tornar revendedor Garotafit">Quero me tornar um(a) revendedor(a)</a>
-            <p className="text-sm text-gray-400 font-medium">Cadastre-se para liberar o catálogo, peças e valores exclusivos do atacado.</p>
+            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+            <p className="text-xs text-gray-400">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
           </div>
         </section>
 
@@ -231,7 +289,7 @@ export default function App() {
             <h2 className="text-3xl lg:text-5xl">Produtos premium com alto giro - moda fitness no atacado</h2>
             <p className="text-gray-600">Monte um mix com peças de alto giro. Cadastre-se para liberar os valores de atacado, peças e condições exclusivas.</p>
             <div className="mt-6 inline-block bg-[#FFB02E] text-black font-bold px-6 py-3 uppercase text-xs tracking-tighter">
-              Comece com apenas algumas peças + retorno de até 100% + pronta entrega
+              Pedido mínimo R$1.000 · retorno de até 100% · pronta entrega · 6x sem juros
             </div>
           </div>
 
@@ -272,7 +330,8 @@ export default function App() {
             <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">
               Pedido despachado em até 24h após confirmação do pagamento (envio de SP para todo Brasil).
             </p>
-            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Fazer cadastro para acessar catálogo">Fazer meu cadastro</a>
+            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
           </div>
         </section>
 
@@ -329,7 +388,8 @@ export default function App() {
           </div>
 
           <div className="mt-16">
-            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Fazer cadastro para começar a revender">Fazer meu cadastro</a>
+            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
           </div>
         </section>
 
@@ -420,7 +480,8 @@ export default function App() {
           </div>
 
           <div className="mt-16 text-center">
-            <a href={REGISTRATION_LINK} className="btn-primary px-12" aria-label="Quero revender moda fitness Garotafit">Quero revender moda fitness</a>
+            <a href={REGISTRATION_LINK} className="btn-primary px-12" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
           </div>
         </section>
 
@@ -445,7 +506,8 @@ export default function App() {
             </div>
 
             <div className="mt-16 text-center">
-              <a href={REGISTRATION_LINK} className="btn-primary px-16 py-5 text-lg" aria-label="Fazer cadastro para revenda Garotafit">Fazer meu cadastro</a>
+              <a href={REGISTRATION_LINK} className="btn-primary px-16 py-5 text-lg" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+              <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
             </div>
           </div>
         </section>
@@ -467,11 +529,11 @@ export default function App() {
               Pronta para revender moda fitness com a <span className="text-accent">Garotafit?</span>
             </h2>
             <p className="text-xl text-gray-200">
-              Comece com suas primeiras peças, tenha retorno de até 100%, parcelamento em 6x sem juros e despacho em até 24h após confirmação.
+              Pedido mínimo de R$1.000, retorno de até 100%, parcelamento em 6x sem juros e despacho em até 24h após confirmação.
             </p>
             <div className="space-y-4">
-              <a href={REGISTRATION_LINK} className="btn-primary px-12 py-6 text-xl" aria-label="Fazer cadastro final para revenda Garotafit">Fazer meu cadastro</a>
-              <p className="text-sm text-gray-300 italic font-medium">Você será atendida no WhatsApp pelo time comercial.</p>
+              <a href={REGISTRATION_LINK} className="btn-primary px-12 py-6 text-xl" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+              <p className="text-xs text-gray-300 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
             </div>
           </div>
         </section>
