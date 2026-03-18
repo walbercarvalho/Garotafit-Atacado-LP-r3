@@ -87,6 +87,13 @@ const AccordionItem: React.FC<{ question: string; answer: string }> = ({ questio
 export default function App() {
   return (
     <div className="antialiased">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:font-bold focus:rounded"
+      >
+        Pular para o conteúdo
+      </a>
+
       {/* Header Atualizado com Grid para Centralização */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-100 px-4 md:px-6 py-2 md:py-4 flex justify-between lg:grid lg:grid-cols-3 items-center h-[70px] md:h-[90px]">
         {/* Lado Esquerdo: Logo e Badge */}
@@ -95,6 +102,8 @@ export default function App() {
             src="https://storage.googleapis.com/vms1/stores/10/logo-garotafit-atacado.png"
             alt="Garotafit Atacado - Moda Fitness no Atacado"
             className="w-[120px] md:w-[180px] object-contain cursor-pointer"
+            width="180"
+            height="40"
           />
           <span className="hidden lg:block text-[10px] uppercase font-bold bg-black text-white px-2 py-1 rounded">
             Site Oficial Atacado
@@ -118,7 +127,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="pt-[70px] md:pt-[90px]">
+      <main id="main-content" className="pt-[70px] md:pt-[90px]">
         {/* Section 1: Hero */}
         <section className="bg-white px-6 lg:px-20 py-16 lg:py-28 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
           <div className="w-full lg:w-1/2 space-y-8">
@@ -157,6 +166,8 @@ export default function App() {
                 src="https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/9-683x1024.jpg"
                 alt="Modelo vestindo conjunto fitness Garotafit - Moda fitness de alta qualidade para revenda"
                 className="w-full h-auto object-cover grayscale-0 group-hover:scale-105 transition-transform duration-700"
+                width="683"
+                height="1024"
               />
             </div>
             <div className="absolute top-10 -right-10 w-full h-full bg-[#FFB02E] -z-10 opacity-10"></div>
@@ -245,6 +256,8 @@ export default function App() {
                     alt={`${prod.tag} - Moda fitness Garotafit para revenda no atacado`}
                     className="w-full h-auto aspect-[3/4] object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
+                    width="1200"
+                    height="1600"
                   />
                 </div>
                 <div className="mt-4">
@@ -362,6 +375,9 @@ export default function App() {
                       src={dep.img}
                       alt={`Foto de ${dep.n}, ${dep.c}`}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      loading="lazy"
+                      width="1024"
+                      height="1024"
                     />
                   </div>
                 </div>
@@ -396,6 +412,8 @@ export default function App() {
                   alt={`Depoimento real de revendedora Garotafit via WhatsApp - Conversa ${i + 1}`}
                   className="w-full h-auto block"
                   loading="lazy"
+                  width="472"
+                  height="1024"
                 />
               </div>
             ))}
@@ -439,6 +457,9 @@ export default function App() {
             src="https://popstore.com.br/popstorage/components_files/26/17703095853882-viva_verao_garotafit.webp"
             alt="Revenda Garotafit"
             className="absolute inset-0 w-full h-full object-cover scale-105"
+            loading="lazy"
+            width="1920"
+            height="600"
           />
 
           <div className="relative text-white z-20 max-w-4xl space-y-8">
@@ -464,6 +485,9 @@ export default function App() {
               src="https://storage.googleapis.com/vms1/stores/10/logo-garotafit-atacado.png"
               alt="Garotafit Atacado - Moda Fitness"
               className="w-[150px] object-contain"
+              loading="lazy"
+              width="150"
+              height="33"
             />
             <p className="text-sm text-gray-500">Moda fitness de alta performance com design exclusivo para sua revenda.</p>
           </div>
