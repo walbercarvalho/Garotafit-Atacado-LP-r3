@@ -6,24 +6,25 @@ const REGISTRATION_LINK = "https://www.garotafit.com.br/new_account/wholesale/?s
 // Comentário: Substitua o link acima pelo link oficial caso mude.
 
 const FAQ_DATA = [
-  { q: "Qual o valor mínimo para fazer um pedido?", a: "O pedido mínimo é de R$1.000,00. Esse valor permite montar um mix estratégico com peças de alto giro, ideal para já sair vendendo e ter retorno rápido." },
-  { q: "Quanto posso ter de retorno?", a: "O retorno sugerido é de até 100% sobre o investimento. Isso varia conforme o seu mix de produtos e a estratégia de venda aplicada na sua região." },
-  { q: "Quais as formas de pagamento disponíveis?", a: "Oferecemos diversas opções, incluindo parcelamento em até 6x sem juros no cartão de crédito, PIX e Boleto Bancário." },
-  { q: "Posso parcelar os pedidos para revenda?", a: "Sim, ofertamos parcelamento em até 6 parcelas sem juros no cartão de crédito." },
-  { q: "As peças são pronta entrega? Quando enviam?", a: "Sim, todas as peças do catálogo estão disponíveis para pronta entrega. O despacho é feito em até 24h úteis após a confirmação do pagamento (enviamos de SP para todo o Brasil)." },
-  { q: "Existe política de troca ou defeito?", a: "Sim, possuímos uma política clara de trocas por defeitos de fabricação. Valorizamos a transparência e a segurança das nossas revendedoras." },
-  { q: "Como acesso o catálogo completo e os valores?", a: "Por questões estratégicas, os valores de atacado são liberados exclusivamente após o cadastro de revendedora. Assim que concluir o cadastro, nosso time enviará o acesso via WhatsApp." }
+  { q: "Qual \u00e9 o pedido m\u00ednimo?", a: "O pedido m\u00ednimo \u00e9 de R$1.000, parcelado em at\u00e9 6x sem juros. Enviamos de SP para todo Brasil com despacho em at\u00e9 24h ap\u00f3s confirma\u00e7\u00e3o do pagamento." },
+  { q: "Preciso de CNPJ para comprar?", a: "N\u00e3o! Voc\u00ea pode comprar usando apenas o CPF. N\u00e3o exigimos CNPJ para fazer seu primeiro pedido como revendedora." },
+  { q: "A Garotafit \u00e9 uma empresa real? Como sei que n\u00e3o \u00e9 golpe?", a: "Somos uma empresa brasileira fundada em 2011, com o CNPJ 36.277.854/0001-67, com sede em S\u00e3o Paulo-SP localizada na Av. \u00c1gua Fria 503 em S\u00e3o Paulo - SP. Temos +2.000 revendedoras ativas em todo Brasil. Voc\u00ea pode verificar nosso CNPJ no site da Receita Federal a qualquer momento." },
+  { q: "Quanto posso ter de retorno?", a: "O retorno sugerido \u00e9 de at\u00e9 100% sobre o investimento. Isso varia conforme o seu mix de produtos e a estrat\u00e9gia de venda aplicada na sua regi\u00e3o." },
+  { q: "Quais as formas de pagamento dispon\u00edveis?", a: "Oferecemos diversas op\u00e7\u00f5es, incluindo parcelamento em at\u00e9 6x sem juros no cart\u00e3o de cr\u00e9dito, PIX e Boleto Banc\u00e1rio." },
+  { q: "As pe\u00e7as s\u00e3o pronta entrega? Quando enviam?", a: "Sim, todas as pe\u00e7as do cat\u00e1logo est\u00e3o dispon\u00edveis para pronta entrega. O despacho \u00e9 feito em at\u00e9 24h \u00fateis ap\u00f3s a confirma\u00e7\u00e3o do pagamento (enviamos de SP para todo o Brasil)." },
+  { q: "Existe pol\u00edtica de troca ou defeito?", a: "Sim, possu\u00edmos uma pol\u00edtica clara de trocas por defeitos de fabrica\u00e7\u00e3o. Valorizamos a transpar\u00eancia e a seguran\u00e7a das nossas revendedoras." },
+  { q: "Como acesso o cat\u00e1logo completo e os valores?", a: "Por quest\u00f5es estrat\u00e9gicas, os valores de atacado s\u00e3o liberados exclusivamente ap\u00f3s o cadastro de revendedora. Assim que concluir o cadastro, nosso time enviar\u00e1 o acesso via WhatsApp." }
 ];
 
 const PRODUCTS = [
-  { id: 1, tag: "Mais vendidos", img: "https://cdn.dooca.store/161238/products/bjkyzlcctfl9zibuymqvhdacqw6yrmeapy9m_1200x1600.jpg?v=1763146665000" },
-  { id: 2, tag: "Conjunto Fitness", img: "https://cdn.dooca.store/161238/products/zzjyqyc0uzyai3q7v0ojbapv4x5epbi2uff6_1200x1600.jpg?v=1768598465" },
-  { id: 3, tag: "Macacão Fitness", img: "https://cdn.dooca.store/161238/products/dddblps2xmj6rcto7mqryy29linww88k15w6_1200x1600.jpg?v=1762899961" },
-  { id: 4, tag: "Blusinha Baby Look", img: "https://cdn.dooca.store/161238/products/3uwgc0o14zr7dwuwbzveghkdcsy4gqzqdjr8_1200x1600.jpg?v=1770315156" },
-  { id: 5, tag: "Conjunto Esportivo Fitness", img: "https://cdn.dooca.store/161238/products/jijqjues4qjiwy9vm9qed46gkdbaqtcdyhnj_1200x1600.jpg?v=1770313341" },
-  { id: 6, tag: "Calça Legging Flare", img: "https://cdn.dooca.store/161238/products/2jfx5raqmuyszscbamr5qygrxmk0dgcquwyt_1200x1600.jpg?v=1770308792" },
-  { id: 7, tag: "Macaquinho Fitness", img: "https://cdn.dooca.store/161238/products/641htpksdaqfifrdo0ywurvj9rbopdiumfov_1200x1600.jpg?v=1768599376&webp=0" },
-  { id: 8, tag: "Conjunto Fitness", img: "https://cdn.dooca.store/161238/products/pmhilqv8qf8t2vfuyt8r4emnd41bcloqwurb_1200x1600.jpg?v=1763147530000" }
+  { id: 1, tag: "Mais vendidos", badges: ["\u{1F525} Alta sa\u00edda", "\u2B50 Mais pedida pelas revendedoras"], img: "https://cdn.dooca.store/161238/products/bjkyzlcctfl9zibuymqvhdacqw6yrmeapy9m_1200x1600.jpg?v=1763146665000" },
+  { id: 2, tag: "Conjunto Fitness", badges: ["\u{1F525} Alta sa\u00edda", "\u2705 Zero transpar\u00eancia", "\u{1F4E6} Reposi\u00e7\u00e3o frequente"], img: "https://cdn.dooca.store/161238/products/zzjyqyc0uzyai3q7v0ojbapv4x5epbi2uff6_1200x1600.jpg?v=1768598465" },
+  { id: 3, tag: "Macac\u00e3o Fitness", badges: ["\u2B50 Mais pedida pelas revendedoras", "\u2705 Zero transpar\u00eancia"], img: "https://cdn.dooca.store/161238/products/dddblps2xmj6rcto7mqryy29linww88k15w6_1200x1600.jpg?v=1762899961" },
+  { id: 4, tag: "Blusinha Baby Look", badges: ["\u{1F3A8} Cor neutra e atemporal", "\u{1F4E6} Reposi\u00e7\u00e3o frequente"], img: "https://cdn.dooca.store/161238/products/3uwgc0o14zr7dwuwbzveghkdcsy4gqzqdjr8_1200x1600.jpg?v=1770315156" },
+  { id: 5, tag: "Conjunto Esportivo Fitness", badges: ["\u{1F525} Alta sa\u00edda", "\u2705 Zero transpar\u00eancia"], img: "https://cdn.dooca.store/161238/products/jijqjues4qjiwy9vm9qed46gkdbaqtcdyhnj_1200x1600.jpg?v=1770313341" },
+  { id: 6, tag: "Cal\u00e7a Legging Flare", badges: ["\u2705 Zero transpar\u00eancia", "\u{1F525} Alta sa\u00edda", "\u{1F3A8} Cor neutra e atemporal"], img: "https://cdn.dooca.store/161238/products/2jfx5raqmuyszscbamr5qygrxmk0dgcquwyt_1200x1600.jpg?v=1770308792" },
+  { id: 7, tag: "Macaquinho Fitness", badges: ["\u2B50 Mais pedida pelas revendedoras", "\u{1F4E6} Reposi\u00e7\u00e3o frequente"], img: "https://cdn.dooca.store/161238/products/641htpksdaqfifrdo0ywurvj9rbopdiumfov_1200x1600.jpg?v=1768599376&webp=0" },
+  { id: 8, tag: "Conjunto Fitness", badges: ["\u{1F525} Alta sa\u00edda", "\u{1F3A8} Cor neutra e atemporal"], img: "https://cdn.dooca.store/161238/products/pmhilqv8qf8t2vfuyt8r4emnd41bcloqwurb_1200x1600.jpg?v=1763147530000" }
 ];
 
 const WHATSAPP_PRINTS = [
@@ -42,14 +43,13 @@ const SectionSubtitle: React.FC<{ text: string }> = ({ text }) => (
   </div>
 );
 
-const AccordionItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const AccordionItem: React.FC<{ question: string; answer: string; isOpen: boolean; onToggle: () => void }> = ({ question, answer, isOpen, onToggle }) => {
   const contentId = `accordion-content-${question.replace(/\s+/g, '-').toLowerCase()}`;
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      setIsOpen(!isOpen);
+      onToggle();
     }
   };
 
@@ -57,7 +57,7 @@ const AccordionItem: React.FC<{ question: string; answer: string }> = ({ questio
     <div className={`accordion-item ${isOpen ? 'active' : ''}`}>
       <div
         className="accordion-header"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         onKeyDown={handleKeyDown}
         role="button"
         tabIndex={0}
@@ -85,6 +85,19 @@ const AccordionItem: React.FC<{ question: string; answer: string }> = ({ questio
 // --- Main App ---
 
 export default function App() {
+  const [openFaqIndices, setOpenFaqIndices] = useState<Set<number>>(new Set([0, 1, 2]));
+  const [faqInteracted, setFaqInteracted] = useState(false);
+
+  const handleFaqToggle = (index: number) => {
+    if (!faqInteracted) {
+      setFaqInteracted(true);
+      // First interaction: switch to single-open mode
+      setOpenFaqIndices(prev => prev.has(index) ? new Set() : new Set([index]));
+    } else {
+      setOpenFaqIndices(prev => prev.has(index) ? new Set() : new Set([index]));
+    }
+  };
+
   return (
     <div className="antialiased">
       <a
@@ -149,6 +162,9 @@ export default function App() {
             </div>
             <p className="text-xs text-gray-400 text-center sm:text-left">
               &#10003; Não precisa de CNPJ · Resposta em até 1 hora útil
+            </p>
+            <p className="text-[12px] text-gray-400 text-center sm:text-left">
+              &#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.
             </p>
 
             {/* Trust Bar */}
@@ -242,6 +258,7 @@ export default function App() {
           <div className="mt-16 text-center">
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
             <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
@@ -279,6 +296,7 @@ export default function App() {
           <div className="mt-16 text-center space-y-6">
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
             <p className="text-xs text-gray-400">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
@@ -286,7 +304,7 @@ export default function App() {
         <section className="bg-gray-50 px-6 lg:px-20 py-20 lg:py-32">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <SectionSubtitle text="Coleção Atacado" />
-            <h2 className="text-3xl lg:text-5xl">Produtos premium com alto giro - moda fitness no atacado</h2>
+            <h2 className="text-3xl lg:text-5xl">Produtos premium com alto giro — só entra no catálogo quem vende de verdade</h2>
             <p className="text-gray-600">Monte um mix com peças de alto giro. Cadastre-se para liberar os valores de atacado, peças e condições exclusivas.</p>
             <div className="mt-6 inline-block bg-[#FFB02E] text-black font-bold px-6 py-3 uppercase text-xs tracking-tighter">
               Pedido mínimo R$1.000 · retorno de até 100% · pronta entrega · 6x sem juros
@@ -320,18 +338,31 @@ export default function App() {
                 </div>
                 <div className="mt-4">
                   <span className="product-tag">{prod.tag}</span>
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {prod.badges.map((badge, bi) => (
+                      <span key={bi} className="text-[10px] lg:text-[11px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-sm">{badge}</span>
+                    ))}
+                  </div>
                   <div className="mt-2 h-[1px] w-0 group-hover:w-full bg-black transition-all duration-500"></div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 text-center space-y-8">
+          {/* Argumento de defesa do premium */}
+          <div className="mt-16 max-w-3xl mx-auto border-l-4 border-[#FFB02E] bg-white pl-6 pr-6 py-6">
+            <p className="text-sm lg:text-base text-gray-600 leading-relaxed italic">
+              "Uma legging que transparece no agachamento não volta comprar outra — e ainda queima sua reputação com as clientes. <strong className="text-black not-italic">Tecido premium custa mais na entrada, mas se paga na fidelidade e na recompra.</strong>"
+            </p>
+          </div>
+
+          <div className="mt-12 text-center space-y-8">
             <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">
               Pedido despachado em até 24h após confirmação do pagamento (envio de SP para todo Brasil).
             </p>
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
             <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
@@ -390,6 +421,7 @@ export default function App() {
           <div className="mt-16">
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
             <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
@@ -482,6 +514,66 @@ export default function App() {
           <div className="mt-16 text-center">
             <a href={REGISTRATION_LINK} className="btn-primary px-12" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
             <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+          </div>
+        </section>
+
+        {/* Section: Qualificação de Audiência */}
+        <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 space-y-4">
+              <SectionSubtitle text="Perfil da Revendedora" />
+              <h2 className="text-3xl lg:text-5xl">A Garotafit Atacado é para você?</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+              {/* Coluna Esquerda — É para você */}
+              <div className="bg-green-50 border border-green-200 p-8 lg:p-10 space-y-5">
+                <h3 className="text-lg font-bold text-green-800 flex items-center gap-2">
+                  <span className="text-green-600 text-xl">&#10003;</span> É para você se...
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Você tem R$1.000 ou mais disponíveis para o primeiro pedido",
+                    "Quer revender uma marca com identidade própria e reconhecimento",
+                    "Valoriza qualidade de tecido — peça que não transparece e dura",
+                    "Busca um fornecedor sério, com entrega garantida e suporte real",
+                    "Quer parar de competir por preço com a concorrência genérica"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm lg:text-base text-gray-700">
+                      <span className="text-green-600 font-bold mt-0.5">&#10003;</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Coluna Direita — Ainda não é para você */}
+              <div className="bg-gray-50 border border-gray-200 p-8 lg:p-10 space-y-5">
+                <h3 className="text-lg font-bold text-gray-600 flex items-center gap-2">
+                  <span className="text-red-400 text-xl">&#10007;</span> Ainda não é para você se...
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "Está buscando pedido mínimo abaixo de R$1.000",
+                    "Quer roupas sem marca (white label / private label)",
+                    "Precisa de preço para competir com Shopee ou Shein",
+                    "Ainda não tem capital disponível para o primeiro investimento"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm lg:text-base text-gray-500">
+                      <span className="text-red-400 font-bold mt-0.5">&#10007;</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center space-y-3">
+              <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Quero ser revendedora Garotafit">Me identifiquei — quero ser revendedora Garotafit &rarr;</a>
+              <p className="text-xs text-gray-400">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+              <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+            </div>
           </div>
         </section>
 
@@ -501,13 +593,14 @@ export default function App() {
 
             <div className="space-y-4">
               {FAQ_DATA.map((item, i) => (
-                <AccordionItem key={i} question={item.q} answer={item.a} />
+                <AccordionItem key={i} question={item.q} answer={item.a} isOpen={openFaqIndices.has(i)} onToggle={() => handleFaqToggle(i)} />
               ))}
             </div>
 
             <div className="mt-16 text-center">
               <a href={REGISTRATION_LINK} className="btn-primary px-16 py-5 text-lg" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
               <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
             </div>
           </div>
         </section>
@@ -534,6 +627,7 @@ export default function App() {
             <div className="space-y-4">
               <a href={REGISTRATION_LINK} className="btn-primary px-12 py-6 text-xl" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
               <p className="text-xs text-gray-300 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+              <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
             </div>
           </div>
         </section>
