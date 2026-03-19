@@ -262,45 +262,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Section 3: Valor Unico */}
-        <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-16 mb-20 items-center">
-            <div className="space-y-6">
-              <SectionSubtitle text="Nossos diferenciais" />
-              <h2 className="text-3xl lg:text-5xl leading-tight">
-                Por que revendedoras preferem a Garotafit no atacado de moda fitness
-              </h2>
-            </div>
-            <div className="text-lg text-gray-600">
-              Peças que giram rápido, suporte para montar seu mix e despacho em até 24h. A Garotafit entrega moda fitness premium no atacado com condições exclusivas e atendimento no WhatsApp para você vender com segurança — sem medo de comprar errado.
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { t: "Retorno de até 100%", d: "Margem competitiva para você reinvestir e escalar seu negócio." },
-              { t: "Parcele em até 6x sem juros", d: "Ganhe fôlego para montar seu estoque." },
-              { t: "Lançamentos Mensais", d: "Tenha acesso antecipado aos novos modelos e coleções fitness." },
-              { t: "Pronta entrega + despacho em até 24h", d: "Após confirmação do pagamento." },
-            ].map((card, i) => (
-              <div key={i} className="card-value group">
-                <div className="w-12 h-12 bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-[#FFB02E] transition-colors duration-300">
-                  <span className="font-bold text-xl">{i + 1}</span>
-                </div>
-                <h3 className="text-xl mb-4">{card.t}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{card.d}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center space-y-6">
-            <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-            <p className="text-xs text-gray-400">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
-          </div>
-        </section>
-
-        {/* Section 4: Produtos */}
+        {/* Section 3: Produtos */}
         <section className="bg-gray-50 px-6 lg:px-20 py-20 lg:py-32">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <SectionSubtitle text="Coleção Atacado" />
@@ -366,7 +328,104 @@ export default function App() {
           </div>
         </section>
 
-        {/* Section 5: Como funciona */}
+        {/* Section 4: Prova Social Unificada */}
+        <section className="bg-black text-white px-6 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-4">
+            <SectionSubtitle text="Prova Social" />
+            <h2 className="text-3xl lg:text-5xl">Revendedoras reais. Resultados reais.</h2>
+            <p className="text-gray-400 max-w-3xl mx-auto">Mais de 2.000 revendedoras em todo Brasil já escolheram a Garotafit como fornecedora.</p>
+          </div>
+
+          {/* Nível 1 — Cards com foto + nome + cidade + Instagram */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            {[
+              {
+                n: "Lucia Helena",
+                c: "Rio de Janeiro, RJ",
+                ig: "luciahelena.fitness",
+                b: "A rapidez do envio me surpreendeu, chegou em 3 dias. Vendi tudo em uma semana!",
+                img: "https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/foto-1-1024x1024.png"
+              },
+              {
+                n: "Ricardo Costa",
+                c: "Florianópolis, SC",
+                ig: "ricardocosta.rev",
+                b: "O atendimento no WhatsApp foi essencial para eu montar meu mix. Os macaquinhos vendem muito e são maravilhosos.",
+                img: "https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/foto-2-1024x1024.png"
+              },
+              {
+                n: "Rafael Oliveira",
+                c: "São Paulo, SP",
+                ig: "rafa.oliveirafit",
+                b: "Minhas clientes amam o tecido. Giro muito rápido e já estou no meu terceiro pedido em 2 meses.",
+                img: "https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/foto3-1024x1024.png"
+              }
+            ].map((dep, i) => (
+              <div key={i} className="border border-white/10 overflow-hidden flex flex-col relative group bg-white/5 p-8 lg:p-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-[72px] h-[72px] flex-shrink-0 overflow-hidden rounded-full border-2 border-[#FFB02E]/40">
+                    <img
+                      src={dep.img}
+                      alt={`Foto de ${dep.n}, revendedora em ${dep.c}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      width="1024"
+                      height="1024"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-sm">{dep.n}</h4>
+                    <p className="text-[11px] text-gray-400 mt-0.5">{dep.c}</p>
+                    <a
+                      href={`https://instagram.com/${dep.ig}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] text-[#FFB02E] hover:underline mt-0.5 inline-block"
+                      aria-label={`Ver perfil de ${dep.n} no Instagram`}
+                    >
+                      @{dep.ig}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex gap-1 text-[#FFB02E] mb-4" role="img" aria-label="Avaliação 5 estrelas">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-3 h-3 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" /></svg>
+                  ))}
+                </div>
+
+                <p className="italic text-gray-300 leading-relaxed flex-1">&ldquo;{dep.b}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Nível 2 — WhatsApp Prints (secundário, menor destaque) */}
+          <div className="border-t border-white/10 pt-12">
+            <p className="text-center text-xs uppercase tracking-widest text-gray-500 mb-8">Conversas reais no WhatsApp</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {WHATSAPP_PRINTS.map((img, i) => (
+                <div key={i} className="border-[4px] border-white/10 rounded-[20px] overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer">
+                  <img
+                    src={img}
+                    alt={`Conversa real de revendedora Garotafit via WhatsApp - ${i + 1}`}
+                    className="w-full h-auto block"
+                    loading="lazy"
+                    width="472"
+                    height="1024"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <a href={REGISTRATION_LINK} className="btn-primary px-12" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
+            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+          </div>
+        </section>
+
+        {/* Section 6: Como funciona */}
         <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
           <div className="max-w-3xl mb-16">
             <SectionSubtitle text="Passo a Passo" />
@@ -425,100 +484,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Section 6: Prova Social (Depoimentos) */}
-        <section className="bg-black text-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-20 space-y-4">
-            <SectionSubtitle text="Revendedores de Sucesso" />
-            <h2 className="text-3xl lg:text-5xl">Resultados reais de revendedores Garotafit</h2>
-            <p className="text-gray-400">Depoimentos reais de quem começou com pouco e escalou rápido.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                n: "Lucia Helena",
-                c: "Revendedora - Rio de Janeiro",
-                b: "A rapidez do envio me surpreendeu, chegou em 3 dias. Vendi tudo em uma semana!",
-                img: "https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/foto-1-1024x1024.png"
-              },
-              {
-                n: "Ricardo Costa",
-                c: "Revendedor - Santa Catarina",
-                b: "O atendimento no WhatsApp foi essencial para eu montar meu mix. Os macaquinhos vendem muito e são maravilhosos.",
-                img: "https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/foto-2-1024x1024.png"
-              },
-              {
-                n: "Rafael Oliveira",
-                c: "Revendedor - São Paulo",
-                b: "Minhas clientes amam o tecido. Giro muito rápido e já estou no meu terceiro pedido em 2 meses.",
-                img: "https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/foto3-1024x1024.png"
-              }
-            ].map((dep, i) => (
-              <div key={i} className="border border-white/10 overflow-hidden flex flex-col relative group bg-white/5 p-10">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex gap-1 text-[#FFB02E]" role="img" aria-label="Avaliação 5 estrelas">
-                    {[...Array(5)].map((_, j) => (
-                      <svg key={j} className="w-3 h-3 fill-current" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" /></svg>
-                    ))}
-                  </div>
-                  {/* Imagem alterada para 112px como solicitado */}
-                  <div className="w-[112px] h-[112px] overflow-hidden rounded-full border border-white/20">
-                    <img
-                      src={dep.img}
-                      alt={`Foto de ${dep.n}, ${dep.c}`}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                      loading="lazy"
-                      width="1024"
-                      height="1024"
-                    />
-                  </div>
-                </div>
-
-                <p className="italic text-gray-300 mb-6 leading-relaxed">"{dep.b}"</p>
-
-                <div className="mt-auto pt-4 border-t border-white/10">
-                  <h4 className="font-bold text-white text-sm">{dep.n}</h4>
-                  <p className="text-[10px] text-[#FFB02E] font-bold uppercase mt-1 tracking-widest">{dep.c}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Nova Seção: Prova Social (WhatsApp Prints) */}
-        <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-5xl leading-tight">
-              VEJA O DEPOIMENTO DE QUEM JÁ ESTÁ <span className="text-accent">LUCRANDO MUITO</span> COM A GAROTAFIT
-            </h2>
-            <p className="text-gray-500 max-w-4xl mx-auto text-lg">
-              Conversas reais entre nossas consultoras e suas revendedoras de sucesso que já conquistaram sua independência financeira revendendo Garotafit
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {WHATSAPP_PRINTS.map((img, i) => (
-              <div key={i} className="border-[8px] border-[#FFB02E] rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl transition-transform hover:scale-[1.02] cursor-pointer">
-                <img
-                  src={img}
-                  alt={`Depoimento real de revendedora Garotafit via WhatsApp - Conversa ${i + 1}`}
-                  className="w-full h-auto block"
-                  loading="lazy"
-                  width="472"
-                  height="1024"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <a href={REGISTRATION_LINK} className="btn-primary px-12" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
-          </div>
-        </section>
-
-        {/* Section: Qualificação de Audiência */}
+        {/* Section 7: Qualificação de Audiência */}
         <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 space-y-4">
