@@ -87,6 +87,7 @@ const AccordionItem: React.FC<{ question: string; answer: string; isOpen: boolea
 export default function App() {
   const [openFaqIndices, setOpenFaqIndices] = useState<Set<number>>(new Set([0, 1, 2]));
   const [faqInteracted, setFaqInteracted] = useState(false);
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
 
   const handleFaqToggle = (index: number) => {
     if (!faqInteracted) {
@@ -148,7 +149,7 @@ export default function App() {
               Para revendedoras que querem parar de competir por preço
             </span>
             <h1 className="heading-hero text-black">
-              Revenda <span className="text-accent">moda fitness premium</span> com mais segurança, suporte e giro — <span className="text-accent">sem medo</span> de ter um estoque parado
+              Revenda <span className="text-accent">moda fitness premium</span> com mais segurança, suporte e giro — <span className="text-accent">sem medo</span> de ter seu estoque parado
             </h1>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl">
               Peças com qualidade garantida, pronta entrega e atendimento no WhatsApp para revendedoras que querem um fornecedor sério.
@@ -281,10 +282,11 @@ export default function App() {
                 role="button"
                 tabIndex={0}
                 aria-label={`Ver produto: ${prod.tag}`}
+                onClick={() => setLightboxImg(prod.img)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    // Product click handler would go here
+                    setLightboxImg(prod.img);
                   }
                 }}
               >
@@ -404,7 +406,15 @@ export default function App() {
             <p className="text-center text-xs uppercase tracking-widest text-gray-500 mb-8">Conversas reais no WhatsApp</p>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {WHATSAPP_PRINTS.map((img, i) => (
-                <div key={i} className="border-[4px] border-white/10 rounded-[20px] overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer">
+                <div
+                  key={i}
+                  className="border-[4px] border-white/10 rounded-[20px] overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer"
+                  onClick={() => setLightboxImg(img)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Ampliar conversa WhatsApp ${i + 1}`}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setLightboxImg(img); } }}
+                >
                   <img
                     src={img}
                     alt={`Conversa real de revendedora Garotafit via WhatsApp - ${i + 1}`}
@@ -644,6 +654,32 @@ export default function App() {
           <span>Desenvolvido por <a href="https://novamedia.com.br" className="hover:text-black transition-colors" aria-label="Visitar site da Novamedia" target="_blank" rel="noopener noreferrer">Novamedia</a>.</span>
         </div>
       </footer>
+
+      {/* Lightbox */}
+      {lightboxImg && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setLightboxImg(null)}
+          role="dialog"
+          aria-label="Visualizar imagem ampliada"
+          onKeyDown={(e) => { if (e.key === 'Escape') setLightboxImg(null); }}
+        >
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightboxImg(null); }}
+            className="absolute top-4 right-4 md:top-8 md:right-8 text-white bg-black/50 hover:bg-black/80 rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition-colors z-10 cursor-pointer"
+            aria-label="Fechar visualização"
+            autoFocus
+          >
+            ✕
+          </button>
+          <img
+            src={lightboxImg}
+            alt="Imagem ampliada"
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }
