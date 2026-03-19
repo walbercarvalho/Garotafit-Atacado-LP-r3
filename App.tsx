@@ -143,7 +143,7 @@ export default function App() {
 
       <main id="main-content" className="pt-[70px] md:pt-[90px]">
         {/* Section 1: Hero */}
-        <section className="bg-white px-6 lg:px-20 py-16 lg:py-28 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
+        <section className="bg-white px-6 md:px-12 lg:px-20 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
           <div className="w-full lg:w-1/2 space-y-8">
             <span className="uppercase text-xs tracking-[0.2em] font-bold text-[#FFB02E] leading-none block mb-6">
               Para revendedoras que querem parar de competir por preço
@@ -158,8 +158,8 @@ export default function App() {
               Pedido mínimo R$1.000 · até 6x sem juros · envio de SP para todo Brasil · Comece comprando com seu CPF
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado Garotafit">Liberar catálogo e preços de atacado &rarr;</a>
-              <a href={REGISTRATION_LINK} className="btn-secondary" aria-label="Solicitar aprovação como revendedora Garotafit">Solicitar aprovação como revendedora &rarr;</a>
+              <a href={REGISTRATION_LINK} className="btn-primary lg:whitespace-nowrap" aria-label="Liberar catálogo e preços de atacado Garotafit">Liberar catálogo e preços de atacado &rarr;</a>
+              <a href={REGISTRATION_LINK} className="btn-secondary lg:whitespace-nowrap" aria-label="Solicitar aprovação como revendedora Garotafit">Solicitar aprovação como revendedora &rarr;</a>
             </div>
             <p className="text-xs text-gray-400 text-center sm:text-left">
               &#10003; Não precisa de CNPJ · Resposta em até 1 hora útil
@@ -169,25 +169,25 @@ export default function App() {
             </p>
 
             {/* Trust Bar */}
-            <div className="border-t border-gray-200 pt-6 mt-2">
+            <div className="border-t border-gray-200 pt-8 mt-4">
               <ul className="hidden lg:flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-gray-500">
                 <li>&#128274; CNPJ 36.277.854/0001-67</li>
                 <li>&#10003; Empresa desde 2011</li>
                 <li>&#10003; +2.000 revendedoras</li>
-                <li>&#10003; Sem CNPJ para comprar</li>
+                <li>&#10003; Compre com seu CPF</li>
                 <li>&#10003; Despacho em até 24h</li>
               </ul>
-              <ul className="lg:hidden flex flex-col gap-1.5 text-[12px] text-gray-500">
+              <ul className="lg:hidden flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-500">
                 <li>&#128274; CNPJ 36.277.854/0001-67</li>
                 <li>&#10003; Empresa desde 2011</li>
-                <li>&#10003; +2.000 revendedoras ativas</li>
-                <li>&#10003; Sem CNPJ para comprar</li>
+                <li>&#10003; +2.000 revendedoras</li>
+                <li>&#10003; Compre com seu CPF</li>
                 <li>&#10003; Despacho em até 24h</li>
               </ul>
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center relative">
-            <div className="w-[65%] relative group cursor-pointer">
+            <div className="w-full lg:w-[65%] relative group cursor-pointer">
             <div className="relative z-10 border-[15px] border-white shadow-2xl">
               <img
                 src="https://lp.garotafitbrasil.com.br/wp-content/uploads/2025/07/9-683x1024.jpg"
@@ -203,8 +203,8 @@ export default function App() {
         </section>
 
         {/* Section 2: Por que revendedoras escolhem a Garotafit */}
-        <section className="bg-black text-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-16 space-y-4">
+        <section className="bg-black text-white px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-6">
             <SectionSubtitle text="Diferenciais" dark />
             <h2 className="text-3xl lg:text-5xl">Por que revendedoras escolhem a Garotafit</h2>
           </div>
@@ -248,7 +248,7 @@ export default function App() {
                 d: "S\u00f3 entra no cat\u00e1logo quem vende. Cada pe\u00e7a foi validada por +2.000 revendedoras ativas."
               }
             ].map((item, i) => (
-              <div key={i} className="border border-white/10 p-8 group hover:border-[#FFB02E]/30 transition-colors">
+              <div key={i} className="border border-white/10 p-6 lg:p-8 group hover:border-[#FFB02E]/30 transition-colors">
                 <div className="mb-4 p-3 bg-white/5 w-fit group-hover:bg-[#FFB02E]/10 transition-colors">
                   {item.icon}
                 </div>
@@ -260,14 +260,14 @@ export default function App() {
 
           <div className="mt-16 text-center">
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+            <p className="text-xs text-gray-400 mt-4">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
         {/* Section 3: Produtos */}
-        <section className="bg-gray-50 px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-16 space-y-4">
+        <section className="bg-gray-50 px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-6">
             <SectionSubtitle text="Coleção Atacado" />
             <h2 className="text-3xl lg:text-5xl">Produtos premium com alto giro — acesse o catálogo e comece a vender</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">Monte um mix com peças de alto giro. Cadastre-se para liberar os valores de atacado, peças e condições exclusivas.</p>
@@ -276,7 +276,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
             {PRODUCTS.map((prod) => (
               <div
                 key={prod.id}
@@ -316,7 +316,7 @@ export default function App() {
           </div>
 
           {/* Argumento de defesa do premium */}
-          <div className="mt-16 max-w-3xl mx-auto border-l-4 border-[#FFB02E] bg-white pl-6 pr-6 py-6">
+          <div className="mt-16 max-w-3xl mx-auto border-l-4 border-[#FFB02E] bg-white pl-8 pr-6 py-6">
             <p className="text-sm lg:text-base text-gray-600 leading-relaxed italic">
               "Uma legging que transparece no agachamento não volta comprar outra — e ainda queima sua reputação com as clientes. <strong className="text-black not-italic">Tecido premium custa mais na entrada, mas se paga na fidelidade e na recompra.</strong>"
             </p>
@@ -327,14 +327,14 @@ export default function App() {
               Pedido despachado em até 24h após confirmação do pagamento (envio de SP para todo Brasil).
             </p>
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+            <p className="text-xs text-gray-400 mt-4">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
         {/* Section 4: Prova Social Unificada */}
-        <section className="bg-black text-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-16 space-y-4">
+        <section className="bg-black text-white px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-6">
             <SectionSubtitle text="Prova Social" dark />
             <h2 className="text-3xl lg:text-5xl">Revendedoras reais. Resultados reais.</h2>
             <p className="text-gray-400 max-w-3xl mx-auto">Mais de 2.000 revendedoras em todo Brasil já escolheram a Garotafit como fornecedora.</p>
@@ -432,14 +432,14 @@ export default function App() {
 
           <div className="mt-16 text-center">
             <a href={REGISTRATION_LINK} className="btn-primary px-12" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+            <p className="text-xs text-gray-400 mt-4">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
         {/* Section 6: Como funciona */}
-        <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-16 space-y-4">
+        <section className="bg-white px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-6">
             <SectionSubtitle text="Passo a Passo" />
             <h2 className="text-3xl lg:text-5xl">Como comprar no atacado com a Garotafit e começar a revender hoje</h2>
           </div>
@@ -478,7 +478,7 @@ export default function App() {
               }
             ].map((step, i) => (
               <div key={i} className="flex flex-col gap-4 group">
-                <div className="mb-2 p-4 bg-gray-50 w-fit group-hover:bg-[#FFB02E]/10 transition-colors">
+                <div className="p-4 bg-gray-50 w-fit group-hover:bg-[#FFB02E]/10 transition-colors">
                   {step.icon}
                 </div>
                 <span className="text-accent font-bold text-xs uppercase tracking-widest">{step.p}</span>
@@ -491,14 +491,14 @@ export default function App() {
 
           <div className="mt-16 text-center">
             <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-            <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-            <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+            <p className="text-xs text-gray-400 mt-4">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+            <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
           </div>
         </section>
 
         {/* Section 7: Qualificação de Audiência */}
-        <section className="bg-black text-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-12 space-y-4">
+        <section className="bg-black text-white px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-12 space-y-6">
             <SectionSubtitle text="Perfil da Revendedora" dark />
             <h2 className="text-3xl lg:text-5xl">A Garotafit Atacado é para você?</h2>
           </div>
@@ -506,7 +506,7 @@ export default function App() {
 
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {/* Coluna Esquerda — É para você */}
-              <div className="bg-green-900/30 border border-green-500/30 p-8 lg:p-10 space-y-5">
+              <div className="bg-green-900/30 border border-green-500/30 p-6 lg:p-10 space-y-4 lg:space-y-5">
                 <h3 className="text-lg font-bold text-green-400 flex items-center gap-2">
                   <span className="text-green-400 text-2xl">&#10003;</span> É para você se...
                 </h3>
@@ -527,7 +527,7 @@ export default function App() {
               </div>
 
               {/* Coluna Direita — Ainda não é para você */}
-              <div className="bg-white/5 border border-white/10 p-8 lg:p-10 space-y-5">
+              <div className="bg-white/5 border border-white/10 p-6 lg:p-10 space-y-4 lg:space-y-5">
                 <h3 className="text-lg font-bold text-gray-400 flex items-center gap-2 leading-none">
                   <span className="text-red-400 text-2xl">&#10007;</span> Ainda não é para você se...
                 </h3>
@@ -550,14 +550,14 @@ export default function App() {
             <div className="mt-12 text-center space-y-3">
               <a href={REGISTRATION_LINK} className="btn-primary" aria-label="Quero ser revendedora Garotafit">Me identifiquei — quero ser revendedora Garotafit &rarr;</a>
               <p className="text-xs text-gray-400">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-              <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+              <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
             </div>
           </div>
         </section>
 
         {/* Section 7: FAQ */}
-        <section className="bg-white px-6 lg:px-20 py-20 lg:py-32">
-          <div className="text-center mb-16 space-y-4">
+        <section className="bg-white px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+          <div className="text-center mb-16 space-y-6">
             <SectionSubtitle text="FAQ" />
             <h2 className="text-3xl lg:text-5xl">
               Dúvidas Frequentes
@@ -573,8 +573,8 @@ export default function App() {
 
             <div className="mt-16 text-center">
               <a href={REGISTRATION_LINK} className="btn-primary px-16 py-5 text-lg" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
-              <p className="text-xs text-gray-400 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-              <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+              <p className="text-xs text-gray-400 mt-4">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
+              <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
             </div>
           </div>
         </section>
@@ -601,7 +601,7 @@ export default function App() {
             <div className="space-y-4">
               <a href={REGISTRATION_LINK} className="btn-primary px-12 py-6 text-xl" aria-label="Liberar catálogo e preços de atacado">Liberar catálogo e preços de atacado &rarr;</a>
               <p className="text-xs text-gray-300 mt-3">&#10003; Não precisa de CNPJ · Resposta em até 1 hora útil</p>
-              <p className="text-[12px] text-gray-400 mt-1">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
+              <p className="text-[12px] text-gray-400 mt-2">&#128230; Cadastros aprovados até sexta-feira entram no envio da próxima semana.</p>
             </div>
           </div>
         </section>
@@ -609,7 +609,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-100 px-6 lg:px-20 py-12">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 lg:gap-12 mb-12">
           <div className="space-y-6">
             <img
               src="https://storage.googleapis.com/vms1/stores/10/logo-garotafit-atacado.png"
